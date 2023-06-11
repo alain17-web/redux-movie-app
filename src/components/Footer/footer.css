@@ -1,1 +1,9 @@
-/*# sourceMappingURL=footer.css.map */
+.footer {
+  background: #1a242f;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  flex-direction: column;
+}/*# sourceMappingURL=footer.css.map */
