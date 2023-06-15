@@ -1,15 +1,25 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import movieApi from '../../common/apis/movieApi'
 import { APIKEY } from '../../common/apis/MovieApiKey'
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+
+
+
+
 
 //fetch movies
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
-    
-    const response = await movieApi.get(
+
+     const response = await movieApi.get(
         `?apiKey=${APIKEY}&s=${term}&type=movie`
     )
     
-    return response.data
+    if(response.data) {
+        return response.data
+    }else{
+        (<div><AutorenewIcon/> ...loading</div>)
+    }
+     
 })
 
 //fetch shows
