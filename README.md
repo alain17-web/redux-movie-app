@@ -1,1 +1,1 @@
-Redux toolkit tutorial
+Redux toolkit tutorial - React JS - React-slick
